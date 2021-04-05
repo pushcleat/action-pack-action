@@ -1,0 +1,6 @@
+"author": "goruha"
+"description": "test GitHub Actions"
+"name": "test"
+"runs":
+  "image": "nginx:latest"
+  "using": "docker"
