@@ -1,0 +1,19 @@
+"description": "Pack action"
+"inputs":
+  "destination_dir":
+    "description": "Destination directory"
+    "required": true
+  "image":
+    "description": "Docker image"
+    "required": true
+  "source_dir":
+    "description": "Action source directory"
+    "required": true
+"name": "Pack action"
+"runs":
+  "env":
+    "DESTINATION_DIR": "${{ inputs.destination_dir }}"
+    "IMAGE": "${{ inputs.image }}"
+    "SOURCE_DIR": "${{ inputs.source_dir }}"
+  "image": "pushcleat/action-pack-action:sha-6bab0b58fdc182cf366b403a24a2c51cf5336a07"
+  "using": "docker"
