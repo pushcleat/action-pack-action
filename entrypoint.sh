@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 set -euo pipefail
 
 ## Use yq until this PR would be merged https://github.com/google/go-jsonnet/pull/339
