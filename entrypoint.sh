@@ -1,8 +1,10 @@
 #!/usr/bin/env sh
 set -euo pipefail
 
+APP_WORKDIR=${APP_WORKDIR:-/}
+
 ## Use yq until this PR would be merged https://github.com/google/go-jsonnet/pull/339
-jsonnet ./pack.jsonnet \
+jsonnet ${APP_WORKDIR}/pack.jsonnet \
 	--ext-str action="$(yq eval '.' ${SOURCE_DIR}/action.yml -j)" \
 	--ext-str image="${IMAGE}" \
 	--string \
