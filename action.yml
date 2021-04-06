@@ -15,5 +15,5 @@
     "DESTINATION_DIR": "${{ inputs.destination_dir }}"
     "IMAGE": "${{ inputs.image }}"
     "SOURCE_DIR": "${{ inputs.source_dir }}"
-  "image": "pushcleat/action-pack-action:sha-6fa860cd15e1340d333842cf68172ec513b48f4b"
+  "image": "docker://pushcleat/action-pack-action:sha-6fa860cd15e1340d333842cf68172ec513b48f4b"
   "using": "docker"
