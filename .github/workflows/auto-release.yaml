@@ -15,5 +15,3 @@ jobs:
           publish: true
           prerelease: false
           config-name: auto-release.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.PUBLIC_REPO_ACCESS_TOKEN }}
