@@ -7,13 +7,14 @@ RUN apk add -u \
 				yq@cloudposse==4.6.3-r0 \
 				go-jsonnet@cloudposse==0.17.0-r0
 
+ENV APP_WORKDIR /app
+
 # Build the CLI
-COPY entrypoint.sh /
-COPY pack.jsonnet /
+COPY ./ ${APP_WORKDIR}
 
-RUN chmod 755 /entrypoint.sh
+RUN chmod 755 ${APP_WORKDIR}/entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["${APP_WORKDIR}/entrypoint.sh"]
 
 
 
@@ -62,7 +63,7 @@ ENV BATS_PATH=/usr/local/lib/bats
 WORKDIR /bin
 
 ENTRYPOINT ["bats"]
-CMD ["tests/"]
+CMD ["${APP_WORKDIR}/tests/"]
 
 
 
