@@ -12,7 +12,9 @@ setup() {
 	export SOURCE_DIR=${TEST_TEMP_DIR}/source
 	export DESTINATION_DIR=${TEST_TEMP_DIR}/result
 	export IMAGE="nginx:latest"
+
   run ${APP_WORKDIR}/entrypoint.sh
+
   assert_output ""
   assert_success
 
