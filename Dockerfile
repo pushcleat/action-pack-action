@@ -60,10 +60,10 @@ RUN mkdir -p /usr/local/lib/bats/bats-file \
 # Expose BATS_PATH so people can easily use load.bash
 ENV BATS_PATH=/usr/local/lib/bats
 
-WORKDIR /bin
+WORKDIR ${APP_WORKDIR}
 
 ENTRYPOINT ["bats"]
-CMD ["${APP_WORKDIR}/tests/"]
+CMD ["tests/"]
 
 
 
