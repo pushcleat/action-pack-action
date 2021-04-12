@@ -15,5 +15,5 @@
     "DESTINATION_DIR": "${{ inputs.destination_dir }}"
     "IMAGE": "${{ inputs.image }}"
     "SOURCE_DIR": "${{ inputs.source_dir }}"
-  "image": "docker://ghcr.io/pushcleat/action-pack-action:sha-79c57dd288fc0256c95ea53cef73dd7040363ccc"
+  "image": "docker://ghcr.io/pushcleat/action-pack-action:sha-39ac5738655d8d9f5dee360072edae454b207f95"
   "using": "docker"
