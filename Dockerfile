@@ -14,7 +14,7 @@ COPY ./ ${APP_WORKDIR}
 
 RUN chmod 755 ${APP_WORKDIR}/entrypoint.sh
 
-ENTRYPOINT ["${APP_WORKDIR}/entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
 
 
 
