@@ -17,9 +17,6 @@ setup() {
 
   assert_output ""
   assert_success
-
-  assert_file_exist ${TEST_TEMP_DIR}/result/Dockerfile
-
   assert_file_exist ${TEST_TEMP_DIR}/result/action.yml
   run diff ${TEST_TEMP_DIR}/result/action.yml ${BATS_TEST_DIRNAME}/fixtures/expected/action.yml
   assert_output ""
